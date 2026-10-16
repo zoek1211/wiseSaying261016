@@ -8,6 +8,8 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
 
+        int lastId = 0;
+
         while (true) {
             System.out.println("명령) ");
 
@@ -22,7 +24,11 @@ public class Main {
                 System.out.print("작가: ");
                 String author = sc.nextLine().trim();
 
-                System.out.println("1번 명언이 등록되었습니다.");
+                // 등록할때 마다 생성되는 명언번호가 증가
+                int id = ++lastId;
+
+
+                System.out.printf("%d번 명언이 등록되었습니다.\n", id);
             }
 
         }
